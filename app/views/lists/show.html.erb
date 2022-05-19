@@ -1,0 +1,16 @@
+<h2><%= @list.name %></h2>
+
+<%= link_to '< Back', root_path %>
+<br>
+<br>
+<p><strong>Bookmarks</strong></p>
+<ul class="list-group">
+  <% @list.bookmarks.each do |bookmark| %>
+    <li class="list-group-item"><%= bookmark.comment%>
+  <% end %>
+</ul>
+<br>
+<%# <%= simple_form_for [@list, @bookmark] do |f| %>
+  <%# <%= f.input :comment %>
+  <%# <%= f.submit %>
+<%# <% end %>
