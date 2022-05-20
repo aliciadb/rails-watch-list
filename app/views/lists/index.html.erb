@@ -8,16 +8,14 @@
 <div class="container py-5">
   <div class="d-flex align-items-center justify-content-between mb-3">
     <h3 class="mb-0">My Lists</h3>
-    <a class="btn btn-flat" href="/lists/new">Create a movie list</a>
+    <a class="btn btn-primary" href="/lists/new">Create a movie list</a>
   </div>
 
-</div>
-
-
-<div class="container-card">
-  <% @lists.each do |list| %>
-    <div>
-      <%= link_to list.name, list_path(list) %>
-    </div>
-  <% end %>
+  <div>
+    <% @lists.each do |list| %>
+      <div class="card-category">
+        <%= link_to list.name, list_path(list) %>
+      </div>
+    <% end %>
+  </div>
 </div>
