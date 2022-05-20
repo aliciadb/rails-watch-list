@@ -10,27 +10,14 @@
     <h3 class="mb-0">My Lists</h3>
     <a class="btn btn-flat" href="/lists/new">Create a movie list</a>
   </div>
-  <div class="row">
-      <div class="co-12 col-sm-6 col-md-4 mb-3">
-        <a class="text-decoration-none" href="/lists/1">
-          <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dk9a86uhu/image/upload/v1/production/qbfquk131yq4oqjpm9u3tqdw5g0k)">
-            Science Fiction
-          </div>
-      <div class="co-12 col-sm-6 col-md-4 mb-3">
-        <a class="text-decoration-none" href="/lists/5">
-          <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(/assets/list_background-3189eb0e9160edcedd57c02014fc49c978ba6770f0dffcd32100d38aa6119b33.jpg)">
-            whatever
-          </div>
-  </div>
+
 </div>
 
 
-<ul>
+<div class="container-card">
   <% @lists.each do |list| %>
-    <li><%= list.name%>
-    <%#= link_to "See details", list_path(list), class: "btn btn-primary"%>
-    </li>
-
+    <div>
+      <%= link_to list.name, list_path(list) %>
+    </div>
   <% end %>
-</ul>
-<br>
+</div>
